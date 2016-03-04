@@ -1,2 +1,1 @@
-# webpack-hot-module-reload-base
-Very simple configuration to demonstrate webpack hot module reload.
+Webpack hot module load configuration with react support
