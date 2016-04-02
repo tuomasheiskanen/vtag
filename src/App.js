@@ -1,9 +1,18 @@
+'use strict'
+
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Component from './component';
+import Video from './video';
 
-export default
-ReactDOM.render(
-  <Component name="SpedeY" />,
-  document.body
-);
+export default React.createClass({
+  render: () => {
+
+    return ( 
+      <div>
+      {
+        [...Array(10)].map((x) => { return <Video /> })
+      }
+      </div>);
+  }
+});
+

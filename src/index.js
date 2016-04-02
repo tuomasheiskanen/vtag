@@ -1,8 +1,7 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Component from './component';
+'use strict'
 
-ReactDOM.render(
-  <Component name="SpedeY" />,
-  document.body
-);
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './app'
+
+ReactDOM.render(<App />, document.body);

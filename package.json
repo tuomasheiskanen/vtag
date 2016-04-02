@@ -1,7 +1,7 @@
 {
   "name": "broilerplate",
   "version": "1.0.1",
-  "description": "Boilerplate for react-flux",
+  "description": "Virtual-tag",
   "main": "index.js",
   "scripts": {
     "ec": "echo webpack",
