@@ -13,7 +13,7 @@ export default React.createClass({
     return {
       videoOptions: {
         video: true, 
-        audio: false
+        audio: true
       }
     };
   },
@@ -42,7 +42,6 @@ export default React.createClass({
 
     const videoStyle = {
       height: '200px',
-      // width: '100px',
       float: 'left'
     };
 
