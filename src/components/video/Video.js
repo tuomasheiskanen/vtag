@@ -13,7 +13,7 @@ export default React.createClass({
     return {
       videoOptions: {
         video: true, 
-        audio: true
+        audio: false
       }
     };
   },

@@ -2,12 +2,12 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Video from './video';
+import Video from './components/video/video';
+import AugmentedView from './components/augmented_view/AugmentedView'
 
 const videos = [];
 
 export default React.createClass({
-
 
   getInitialState(){
     return {
@@ -33,7 +33,8 @@ export default React.createClass({
         <div onClick={this.add}>Upgrade</div>
         <div onClick={this.remove}>Downgrade</div>
         <div>
-          {this.state.videos}
+          <AugmentedView />
+          // {this.state.videos}
         </div>
       </div>
     );
