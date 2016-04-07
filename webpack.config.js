@@ -1,4 +1,5 @@
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
     entry:  './src',
@@ -18,8 +19,17 @@ module.exports = {
         // css-loader => resolves imports and url(...)s
         // style-loader => inject styles to the page
         //  - modules: enable the css-module spec. use :global to expose reusable css
-        { test: /\.css$/, loader: "style!css?modules" }
+        { test: /\.css$/, loader: "style!css?modules" },
+        // {
+        //   test: /\.css$/,
+        //   loader: ExtractTextPlugin.extract('style', 'css'),
+        //   include: __dirname + '/src'
+        // }
       ]
     },
-    plugins: [new HtmlWebpackPlugin()] // Generate an index.html for the app
+    plugins: [
+      new HtmlWebpackPlugin(), // Generate an index.html for the app
+      // new ExtractTextPlugin('[name].[chunkhash].css')
+    ]
+
 };
