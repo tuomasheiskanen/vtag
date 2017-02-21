@@ -2,8 +2,8 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Video from './components/video/video';
-import AugmentedView from './components/augmented_view/AugmentedView'
+import Video from './components/video/Video';
+import AugmentedView from './components/AugmentedView/AugmentedView'
 
 const videos = [];
 

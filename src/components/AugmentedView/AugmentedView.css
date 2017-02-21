@@ -1,0 +1,16 @@
+.container {
+  width: 400px;
+  height: 400px;
+  background-color: gray;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.geoText{
+  height: 100px;
+  width: 200px;
+}
+
+:global(.something){
+  border-color: black;
+}

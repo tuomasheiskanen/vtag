@@ -2,7 +2,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
-    entry:  './src',
+    devtools: 'cheap-module-eval-source-map',
+    entry:  './src/index.js',
     output: {
       path: './dist', //output folder
       filename: 'bundle.[hash].js', //output filename

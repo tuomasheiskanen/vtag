@@ -1,11 +1,12 @@
 'use strict'
 import React from 'react'
+import styles from './Video.css'
 
 navigator.getUserMedia = ( 
           navigator.getUserMedia 
           || navigator.webkitGetUserMedia 
           || navigator.mozGetUserMedia 
-          || navigator.msGetUserMedia);
+          || navigator.msGetUserMedia)
 
 export default React.createClass({
 
@@ -15,21 +16,21 @@ export default React.createClass({
         video: true, 
         audio: false
       }
-    };
+    }
   },
 
   componentWillMount() {
-    navigator.getUserMedia(this.state.videoOptions, this.onSetupVideoStream, this.onVideoFail);
+    navigator.getUserMedia(this.state.videoOptions, this.onSetupVideoStream, this.onVideoFail)
   },
 
   onSetupVideoStream(localMediaStream){
-    var state = Object.assign({}, this.state);
-    state.videoOptions.streamSrc = window.URL.createObjectURL(localMediaStream);
-    this.setState(state);
+    var state = Object.assign({}, this.state)
+    state.videoOptions.streamSrc = window.URL.createObjectURL(localMediaStream)
+    this.setState(state)
   },
 
   onVideoFail(e) {
-    console.log('Failed to open video - perhaps rejected by the user!', e);
+    console.log('Failed to open video - perhaps rejected by the user!', e)
   },
 
   onVideoLoadedMetaData(e){
@@ -38,18 +39,12 @@ export default React.createClass({
   },
 
   render() {
-    const {streamSrc, onVideoLoadedMetaData} = this.state.videoOptions;
-
-    const videoStyle = {
-      height: '200px',
-      float: 'left'
-    };
+    const {streamSrc, onVideoLoadedMetaData} = this.state.videoOptions
 
     return(
       <div>
-        <video style={videoStyle} src={streamSrc} onloadedmetadata={onVideoLoadedMetaData} autoPlay></video>
+        <video className={styles.video} src={streamSrc} onLoadedMetadata={onVideoLoadedMetaData} autoPlay></video>
       </div>
-    );
+    )
   }
-});
-
+})

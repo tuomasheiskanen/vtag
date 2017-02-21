@@ -4,7 +4,6 @@
   "description": "Virtual-tag",
   "main": "index.js",
   "scripts": {
-    "ec": "echo webpack",
     "start": "webpack-dev-server --inline --hot --content-base dist"
   },
   "author": "",
@@ -24,7 +23,8 @@
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
-    "react": "^0.14.7",
+    "geocoordinate": "^1.0.1",
+    "react": "^15.2.1",
     "react-dom": "^0.14.7"
   }
 }
