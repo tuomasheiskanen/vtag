@@ -1,1 +1,1 @@
-Webpack hot module load configuration with react support
+Wrapping my head around geocoordinates..
