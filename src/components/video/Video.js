@@ -43,7 +43,7 @@ export default React.createClass({
 
     return(
       <div>
-        <video className={styles.video} src={streamSrc} onLoadedMetadata={onVideoLoadedMetaData} autoPlay></video>
+        <video style={{height: this.props.height}} className={styles.video} src={streamSrc} onLoadedMetadata={onVideoLoadedMetaData} autoPlay></video>
       </div>
     )
   }

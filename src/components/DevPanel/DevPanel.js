@@ -51,6 +51,21 @@ export default class DevPanel extends React.Component{
         <div className={styles.currentCoordinate}>
           Current coordinates: {`(${this.state.lat}, ${this.state.lon})`}
         </div>
+        <div>
+          {
+            this.state.entries.map(e => {
+              let distance
+              if(this.state.lat && this.state.lon){
+                console.log('asdölfkj')
+                const currentCoord = new GeoCoordinate(Number(this.state.lat), Number(this.state.lon))
+                const coord = new GeoCoordinate(Number(e.lat), Number(e.lon))
+                const distance = currentCoord.distanceTo(coord)
+                console.log(distance)
+              }
+              return <div>{JSON.stringify(e)}</div>
+            })
+          }
+        </div>
       </div>
     )
   }

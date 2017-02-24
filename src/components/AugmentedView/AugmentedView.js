@@ -65,18 +65,16 @@ export default class AugmentedView extends React.Component{
     return (
       <div>
         <div className={styles.container}>
-          {this.state.isClose ? <div>SOMETHING CLOSE BY</div> : undefined}
-          <div>
-            <Video />
-          </div>        
-          <div>
+          {/*{this.state.isClose ? <div>SOMETHING CLOSE BY</div> : undefined}*/}
+          <Video height={window.innerHeight * 0.6}/>
+          {/*<div>
             <textarea onChange={e => this.onMessageChange(e)} className={styles.geoText} type='text' value={this.state.message}/  >
             <button onClick={e => this.addEntry(e)}>Tag!</button>
-          </div>
+          </div>*/}
         </div>
-        <div className={styles.container}>
+        {/*<div className={styles.container}>
           <DevPanel setCurrentCoordinates={(lat,lon) => this.setCurrentCoordinates(lat,lon)} />
-        </div>
+        </div>*/}
       </div>
     )
   }

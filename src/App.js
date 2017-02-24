@@ -1,43 +1,27 @@
 'use strict'
 
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Video from './components/video/Video';
-import AugmentedView from './components/AugmentedView/AugmentedView'
+import React from 'react'
+import ReactDOM from 'react-dom'
+import Menu from './components/Menu/Menu'
+import styles from './App.css'
+import Viewport from './core/Viewport'
 
-const videos = [];
-
-export default React.createClass({
-
-  getInitialState(){
-    return {
-      videos: []
+export default class App extends React.Component{
+  
+  constructor(props){
+    super(props)
+    const viewport = Viewport.getViewport()
+    this.state = {
+      viewport 
     }
-  },
-
-  add(){
-    var state = Object.assign({}, this.state);
-    state.videos.push(<Video key={state.videos.length} />);
-    this.setState(state);
-  },
-
-  remove(){
-    var state = Object.assign({}, this.state);
-    state.videos.pop();
-    this.setState(state);
-  },
+  }
 
   render(){
     return (
-      <div>
-        <div onClick={this.add}>Upgrade</div>
-        <div onClick={this.remove}>Downgrade</div>
-        <div>
-          <AugmentedView />
-          // {this.state.videos}
-        </div>
+      <div className={styles.container}>
+        <Menu viewport={this.state.viewport} />
       </div>
-    );
+    )
   }
-});
+}
 

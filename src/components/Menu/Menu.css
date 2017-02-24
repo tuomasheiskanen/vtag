@@ -1,0 +1,51 @@
+.container{
+  width: 100%;
+  height: 100%;
+}
+
+.subContainer{
+  width: 100%;
+  height: 100%;  
+}
+
+.actionContainer{
+  border-top: solid 2px black;  
+}
+
+.menuButton{
+  border: none;
+  border-left: solid 1px black;
+  border-right: solid 1px black;
+  background-color: darkslategray;
+  color: white;
+  line-height: 30px;
+  width: 50%;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.menuButton:focus{
+  outline: 0;
+}
+
+.menuButtonSelected{
+  border: none;
+  border-left: solid 1px black;
+  border-right: solid 1px black;
+  background-color: darkgray;  
+  color: white;
+  line-height: 30px;
+  width: 50%;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.menuButtonSelected:focus{
+  outline: 0;
+}
+
+
+
+.menuButton:hover{
+  background-color: darkgray;
+}
